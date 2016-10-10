@@ -51,7 +51,7 @@ Make your life easeir, use Grunt.js to compile and make your .js and .scss files
 
 See default Gruntfile.js and package.json for project structure mentioned above.
 
-## Naming
+## camelCase Naming
 
 Use `camelCase` naming for Services, Controllers:
 * `mygreatController` for Controllers, 
