@@ -52,7 +52,7 @@ Make your life easeir, use Grunt.js to compile and make your `.js` and `.scss` f
 
 See default [Gruntfile.js](https://github.com/geeksteam/CodeRules/blob/master/AngularJS/Gruntfile.js) and [package.json](https://github.com/geeksteam/CodeRules/blob/master/AngularJS/package.json) for project structure mentioned above.
 
-## camelCase Naming
+## Use camelCase Naming
 
 Use `camelCase` naming for Services, Controllers:
 * `mygreatController` for Controllers, 
