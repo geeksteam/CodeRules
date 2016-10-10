@@ -1,5 +1,8 @@
 # AngularJS project structure and code rules
 
+![geeks](https://github.com/geeksteam/VacancyFrontendTest/raw/master/logo-git.png)
+![angulrjs](https://angularjs.org/img/AngularJS-large.png)
+
 ## Project Structure
 
 We are using feature-based directory structure:
@@ -43,77 +46,10 @@ index.html	-- Main index file.
 ```
 
 ## Use Grunt.js
-Use Grunt.js for watch and compile and make your life easier.
 
-Default Gruntfile.js for project structure mentioned above:
-```js
-module.exports = function(grunt) {
-    // Files list
-    var ConcatJSFiles = [
-            'app/_Vendor/**/*.js',
-            'app/app.js',
-            'app/*.js',
-            'app/_Shared/**/*.js',
-            'app/**/*.js'
-        ];
-    grunt.initConfig({
-        // Concat
-        concat: {
-            options: {
-                // define a string to put between each file in the concatenated output
-                separator: ';',
-                sourceMap: true,
-                sourceMapName: 'js/app.js.map'
-            },
-            dist: {
-                // the files to concatenate
-                src: ConcatJSFiles,
-                // the location of the resulting JS file
-                dest: 'js/app.js',
-            }
-        },
-        // Uglify
-        uglify: {
-            my_target: {
-                files: {
-                    'js/app.min.js': ConcatJSFiles
-                }
-            },
-            options: {
-                mangle: false,
-                sourceMap: true
-            },
-        },
-        // Include Source
-        includeSource: {
-            app: {
-                files: {
-                    //Overwriting index.html
-                    'index.html': 'index.src.html'
-                }
-            }
-        },
-        // Watcher
-        watch: {
-            scripts: {
-                files: ['app/**/*.js'],
-                tasks: ['uglify','concat'],
-                //tasks: ['includeSource'],
-                options: {
-                    spawn: false,
-                },
-            },
-        },
-    });
+Make your life easeir, use Grunt.js to compile and make your .js and .scss files.
 
-    grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-include-source');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-
-    grunt.registerTask('default', ['concat']);
-};
-```
+See default Gruntfile.js and package.json for project structure mentioned above.
 
 ## Naming
 
