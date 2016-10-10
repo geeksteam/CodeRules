@@ -1,4 +1,5 @@
-# AngularJS project structure and code rules
+# AngularJS Geeks.team code rules
+We create our rules for better developers colaboration in our company.
 
 ![geeks](https://github.com/geeksteam/VacancyFrontendTest/raw/master/logo-git.png)
 ![angulrjs](https://angularjs.org/img/AngularJS-large.png)
