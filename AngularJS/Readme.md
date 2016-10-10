@@ -48,9 +48,9 @@ index.html	-- Main index file.
 
 ## Use Grunt.js
 
-Make your life easeir, use Grunt.js to compile and make your .js and .scss files.
+Make your life easeir, use Grunt.js to compile and make your `.js` and `.scss` files.
 
-See default Gruntfile.js and package.json for project structure mentioned above.
+See default [Gruntfile.js](https://github.com/geeksteam/CodeRules/blob/master/AngularJS/Gruntfile.js) and [package.json](https://github.com/geeksteam/CodeRules/blob/master/AngularJS/package.json) for project structure mentioned above.
 
 ## camelCase Naming
 
