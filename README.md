@@ -1,5 +1,19 @@
-# Our code manifest
-Our code rules manifest for languages and project structure.
+# Break the rules, but not code rules )))
+Geeks.team code rules manifest.
 
-* [AngularJS manifest](https://github.com/geeksteam/manifest/blob/master/AngularJS.md)
-* Go lang manifest
+**Rules...Why?**
+- [x] For better developers colaboration,
+- [x] Experience exchange, 
+- [x] Best practices usage,
+- [x] Make our developers write better code,
+- [x] Faster projects creation, more time for play PS4, cycling and....
+
+![angulrjs](https://angularjs.org/img/AngularJS-large.png)
+
+**[AngularJS Code Rules](https://github.com/geeksteam/CodeRules/tree/master/AngularJS)**
+
+-----
+
+![golang](https://github.com/golang-samples/gopher-vector/blob/master/gopher-front.png)
+
+**Go lang Code Rules**
