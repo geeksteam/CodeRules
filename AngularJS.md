@@ -5,37 +5,47 @@
 We are using feature-based directory structure:
 ```
 app/
+    app.scss		-- Our main page scss.
     app.js    -- Our App, modules definition and MainController.
+    
     _Vendor   -- All add-ons third-party libs which needs to be included in app
         angualr-websocket.js
+	
     _Shared/    -- Services, Factories, Values - all that shared accros controllers.
         LoaddataService.js
         GlobalValues.js
+	
     Feed/   -- Our Feed Component
         template.html   -- Component template
+	style.scss    -- Sass stylesheet of the component
         FeedComponent.js    -- Component definition and controllers
+	
     Results/    -- Our Results GROUP of components
         Info/   -- Info component of Results group
             tempate.html    -- Component html template
+	    style.scss    -- Sass stylesheet of the component
             InfoComponent.js    -- Component definition and controller
-            style.scss    -- Sass stylesheet of the component
+	    
     Login/    -- Our Login Controller
         LoginForm.html
         LoginAdditionalInfo.html
         LoginController.js
+	
 js/
 	app.js 		-- All js source files concatenated from /app
 	app.min.js		--All js source files concatenated and uglified from /app
 	app.min.js.map
+	
 css/
 	app.css		-- All scss files from /app concatenated and compilted to css
+	
 index.html	-- Main index file.
 ```
 
 ## Use Grunt.js
-Use Grunt.js for watch and compile.
+Use Grunt.js for watch and compile and make your life easier.
 
-Default Gruntfile.js:
+Default Gruntfile.js for project structure mentioned above:
 ```js
 module.exports = function(grunt) {
     // Files list
@@ -117,7 +127,7 @@ Use `camelCase` naming for Services, Controllers:
 Use components instead of Directives. Split your UI to components and elements.
 
 ## Use `controllerAs`
-If the part og UI cannot be in component, use `controllerAs` syntax.
+If the part of UI cannot be in component, use `controllerAs` syntax.
 
 ## Use `var self = this`
 Use `var self = this` to bind this into function global varibale for using inside nested functions.
@@ -137,6 +147,7 @@ function checkFormController(checkService){
 # **DONT** use $scope or $rootScope
 Don't use $scope or $rootScope.
 You can use Services for data sharing, and `this` inside Controllers.
+
 You DONT NEED $scope and $rootScope!
 
 # Services
@@ -193,5 +204,39 @@ Good:
 function checkFormController(checkService){
 		// Bind to OBJECT not to VALUE if you whant live updates
 		this.FormData = checkService
+}
+```
+
+# Startup Logic
+
+## Configuration
+Inject code into module configuration that must be configured before running the angular app. Ideal candidates include providers and constants.
+
+```js
+angular
+    .module('app')
+    .config(configure);
+
+configure.$inject =
+    ['routerHelperProvider', 'exceptionHandlerProvider', 'toastr'];
+
+function configure (routerHelperProvider, exceptionHandlerProvider, toastr) {
+    toastr.options.timeOut = 4000;
+    toastr.options.positionClass = 'toast-bottom-right';
+}
+```
+
+## Run
+Any code that needs to run when an application starts should be declared in a factory, exposed via a function, and injected into the run block.
+
+```js
+angular
+    .module('app')
+    .run(runBlock);
+
+runBlock.$inject = ['authenticator'];
+
+function runBlock(authenticator) {
+    authenticator.initialize();
 }
 ```
