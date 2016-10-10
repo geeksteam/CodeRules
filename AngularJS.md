@@ -16,14 +16,14 @@ app/
         GlobalValues.js
 	
     Feed/   -- Our Feed Component
-        template.html   -- Component template
-	style.scss    -- Sass stylesheet of the component
-        FeedComponent.js    -- Component definition and controllers
+	    template.html   -- Component template
+	    style.scss    -- Sass stylesheet of the component
+	    FeedComponent.js    -- Component definition and controllers
 	
     Results/    -- Our Results GROUP of components
         Info/   -- Info component of Results group
             tempate.html    -- Component html template
-	    style.scss    -- Sass stylesheet of the component
+	        style.scss    -- Sass stylesheet of the component
             InfoComponent.js    -- Component definition and controller
 	    
     Login/    -- Our Login Controller
