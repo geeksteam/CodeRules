@@ -5,7 +5,7 @@
 We are using feature-based directory structure:
 ```
 app/
-    app.js    -- Our App and modules definition.
+    app.js    -- Our App, modules definition and MainController.
     _Vendor   -- All add-ons third-party libs which needs to be included in app
         angualr-websocket.js
     _Shared/    -- Services, Factories, Values - all that shared accros controllers.
@@ -23,11 +23,91 @@ app/
         LoginForm.html
         LoginAdditionalInfo.html
         LoginController.js
+js/
+	app.js 		-- All js source files concatenated from /app
+	app.min.js		--All js source files concatenated and uglified from /app
+	app.min.js.map
+css/
+	app.css		-- All scss files from /app concatenated and compilted to css
+index.html	-- Main index file.
+```
+
+## Use Grunt.js
+Use Grunt.js for watch and compile.
+
+Default Gruntfile.js:
+```js
+module.exports = function(grunt) {
+    // Files list
+    var ConcatJSFiles = [
+            'app/_Vendor/**/*.js',
+            'app/app.js',
+            'app/*.js',
+            'app/_Shared/**/*.js',
+            'app/**/*.js'
+        ];
+    grunt.initConfig({
+        // Concat
+        concat: {
+            options: {
+                // define a string to put between each file in the concatenated output
+                separator: ';',
+                sourceMap: true,
+                sourceMapName: 'js/app.js.map'
+            },
+            dist: {
+                // the files to concatenate
+                src: ConcatJSFiles,
+                // the location of the resulting JS file
+                dest: 'js/app.js',
+            }
+        },
+        // Uglify
+        uglify: {
+            my_target: {
+                files: {
+                    'js/app.min.js': ConcatJSFiles
+                }
+            },
+            options: {
+                mangle: false,
+                sourceMap: true
+            },
+        },
+        // Include Source
+        includeSource: {
+            app: {
+                files: {
+                    //Overwriting index.html
+                    'index.html': 'index.src.html'
+                }
+            }
+        },
+        // Watcher
+        watch: {
+            scripts: {
+                files: ['app/**/*.js'],
+                tasks: ['uglify','concat'],
+                //tasks: ['includeSource'],
+                options: {
+                    spawn: false,
+                },
+            },
+        },
+    });
+
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-include-source');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+
+    grunt.registerTask('default', ['concat']);
+};
 ```
 
 ## Naming
 
-Use `camelCase` naming:
+Use `camelCase` naming for Services, Controllers:
 * `mygreatController` for Controllers, 
 * `goodeesServices` for Services, 
 * `tasksComponent` for Components,
@@ -54,6 +134,10 @@ function checkFormController(checkService){
 
 }
 ```
+# **DONT** use $scope or $rootScope
+Don't use $scope or $rootScope.
+You can use Services for data sharing, and `this` inside Controllers.
+You DONT NEED $scope and $rootScope!
 
 # Services
 
