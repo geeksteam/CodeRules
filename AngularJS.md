@@ -55,6 +55,59 @@ function checkFormController(checkService){
 }
 ```
 
+# Services
+
 ## Use `Services` for sharing and get async data between controllers.
 If you need to store some data from one controller to another or you need to get data from backend using `http` or `websocket`,
 use `Service` for this.
+**DON'T** do this in Controllers.
+
+## Use returns in Service
+Always use returns if some Controllers bind to some of the objects from your Service:
+```js
+function getdataService(){
+	...
+	// Returns:
+	return {
+		Results: this.Results,
+		Check: this.Check
+	};
+}
+```
+
+## Only Service's objects can be bind to controllers
+You can bind only Service's objects inside the Controllers to get the updates while the data in Service changes.
+AngularJS will update the scope only in case of binding object, ***strings,bools are immutable*** and will not update!
+
+Example service:
+```js
+// Service
+app.service('checkService', checkService);
+function checkService(){
+    // Results object
+    this.Results = {};
+    this.Results.City = 'Helsinki';
+    
+    // Returns
+    return {
+    	Results: this.Results
+    }
+}
+```
+Bad:
+```js
+// Controller
+function checkFormController(checkService){
+		// City will NOT UPDATE if data is changed in Service
+		// because strings are immutable and Angular dont watch for them
+		this.FormData.City = checkService.City
+}
+```
+Good:
+```js
+// Controller
+function checkFormController(checkService){
+		// Bind to OBJECT not to VALUE if you whant live updates
+		this.FormData = checkService
+}
+```
