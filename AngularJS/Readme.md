@@ -42,7 +42,7 @@ index.html	-- Main index file.
 ```
 
 # Tools:
-> There are tools which we use and you need to use whith us too if we are working together.
+> There are tools which we use and you need to use with us too if we are working together.
 
 ## Use JSHint
 JSHint can show your code errors during you write it (write the errors )) ). Install it to your Editor.
@@ -112,12 +112,16 @@ Sample `.babelrc`:
 
 ## Use Grunt.js
 
+<img align="right" height="260" src="http://gruntjs.com/img/grunt-logo-no-wordmark.svg">
+
+Grunt.js is a wonderfull tool. You are not frontend developer if you are not using it.
+
 > Make your life easeir, use Grunt.js to compile ES6/7, Sass and make your `.js` and `.scss` files.
 
 See default [Gruntfile.js](https://github.com/geeksteam/CodeRules/blob/master/AngularJS/Gruntfile.js) and [package.json](https://github.com/geeksteam/CodeRules/blob/master/AngularJS/package.json) for project structure mentioned above.
 
 
-# Naming and Services/Controllers/Components:
+# Naming of Services/Controllers/Components:
 
 ## Use camelCase Naming.
 
@@ -129,6 +133,7 @@ Use `camelCase` naming for Services, Controllers:
 
 ## Use Components.
 Use components instead of Directives. Split your UI to components and elements.
+Almost all can be splitted to Components.
 
 > Don't use Directives.
 
@@ -226,6 +231,11 @@ If you write ES6/7 JS code, use `.es6` file extension.
 
 Why not `.js` ? Because Grunt+Babel will produce `.js` code from every of your `.es6` file and we cannot mix untransformed ES6 code with standart JS (it would be an erros). We need to compile it to ES6/7 -> JS first, then concatenate to some total `app.js`.
 
+## Use `let`, `const`. Don't use `var`.
+Var creates so many headaches to JS developers. So don't use aspirin, use `let` and `const`.
+
+> Use uppercase to the `const` names such as: `const ORANGES = 'Apples';`.
+
 ## Classes
 You can use classes instead of functions in case you can extend this class with another functions. If you dont plan to extend this class, there is no need to use classes instead of functions. Just use functions.
 
@@ -275,9 +285,9 @@ angular
     .config(configure);
 
 configure.$inject =
-    ['routerHelperProvider', 'exceptionHandlerProvider', 'toastr'];
+    ['routerHelperProvider'];
 
-function configure (routerHelperProvider, exceptionHandlerProvider, toastr) {
+function configure (routerHelperProvider) {
     toastr.options.timeOut = 4000;
     toastr.options.positionClass = 'toast-bottom-right';
 }
