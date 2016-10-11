@@ -13,11 +13,11 @@ app/
     app.js    -- Our App, modules definition and MainController.
     
     _Vendor   -- All add-ons third-party libs which needs to be included in app
-        angualr-websocket.js
+        angualr-websocket.js		-- Some 3rd party library
 	
     _Shared/    -- Services, Factories, Values - all that shared accros controllers.
-        LoaddataService.js
-        GlobalValues.js
+        LoaddataService.js		-- Some shared services
+        GlobalValues.js		-- Some Global app.values().
 	
     Feed/   -- Our Feed Component
 	    template.html   -- Component template
@@ -88,6 +88,11 @@ module.exports = {
         ]
     }
 };
+```
+
+Set ESLint to ignore ES5 files by adding `.eslintignore`:
+```js
+**/*.js
 ```
 
 ## Use Babel
@@ -208,19 +213,22 @@ function checkFormController(checkService){
 }
 ```
 
-# Use ES6/7:
+# Use ES6/7 JavaScript:
 **Always use ES6 features**. 
 
 Because we use Babel and it can transform all of this stuff to ES5.
 
 ## Use .es6 files extensions
-If you write ES6/7 JS code, use `.es6` file extension. Why not `.js` ? Because Grunt+Babel will produce `.js` code from every of your `.es6` file and we cannot mix untransformed ES6 code with standart JS (it would be an erros). We need to compile it to ES6/7 -> JS first, then concatenate to some total `app.js`.
+If you write ES6/7 JS code, use `.es6` file extension. 
+
+Why not `.js` ? Because Grunt+Babel will produce `.js` code from every of your `.es6` file and we cannot mix untransformed ES6 code with standart JS (it would be an erros). We need to compile it to ES6/7 -> JS first, then concatenate to some total `app.js`.
 
 ## Classes
 You can use classes instead of functions in case you can extend this class with another functions. If you dont plan to extend this class, there is no need to use classes instead of functions. Just use functions.
 
 ## Async / Await
 Instead of using old promises, use new Async/Await syntax from ES7 (or Generators if you prefer).
+
 To transform to ES5 we use `transform-async-to-generator`. So you can use Async/Await and generators created by Babel.
 
 ## Polyfill browser library:
