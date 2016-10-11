@@ -1,5 +1,5 @@
 # AngularJS Geeks.team code rules
-We create our rules for better developers colaboration in our company.
+> We create our rules for better developers colaboration in our company.
 
 ![geeks](https://github.com/geeksteam/VacancyFrontendTest/raw/master/logo-git.png)
 ![angulrjs](https://angularjs.org/img/AngularJS-large.png)
@@ -42,7 +42,7 @@ index.html	-- Main index file.
 ```
 
 # Tools:
-There are tools which we use and you need to use whith us too if we are working together.
+> There are tools which we use and you need to use whith us too if we are working together.
 
 ## Use JSHint
 JSHint can show your code errors during you write it (write the errors )) ). Install it to your Editor.
@@ -112,7 +112,7 @@ Sample `.babelrc`:
 
 ## Use Grunt.js
 
-Make your life easeir, use Grunt.js to compile ES6/7, Sass and make your `.js` and `.scss` files.
+> Make your life easeir, use Grunt.js to compile ES6/7, Sass and make your `.js` and `.scss` files.
 
 See default [Gruntfile.js](https://github.com/geeksteam/CodeRules/blob/master/AngularJS/Gruntfile.js) and [package.json](https://github.com/geeksteam/CodeRules/blob/master/AngularJS/package.json) for project structure mentioned above.
 
@@ -130,7 +130,7 @@ Use `camelCase` naming for Services, Controllers:
 ## Use Components.
 Use components instead of Directives. Split your UI to components and elements.
 
-Don't use Directives.
+> Don't use Directives.
 
 ## Use ONLY `controllerAs` syntax.
 If the part of UI cannot be in component, use `controllerAs` syntax.
@@ -154,14 +154,15 @@ function checkFormController(checkService){
 Don't use $scope or $rootScope.
 You can use Services for data sharing, and `this` inside Controllers.
 
-You DONT NEED $scope and $rootScope!
+> You DONT NEED $scope and $rootScope!
 
 # Services:
 
 ## Use `Services` for sharing and get async data between controllers.
 If you need to store some data from one controller to another or you need to get data from backend using `http` or `websocket`,
 use `Service` for this.
-**DON'T** do this in Controllers.
+
+> **DON'T** do this in Controllers.
 
 ## Use returns in Service.
 Always use returns if some Controllers bind to some of the objects from your Service:
@@ -178,7 +179,8 @@ function getdataService(){
 
 ## Only Service's objects can be bind to controllers.
 You can bind only Service's objects inside the Controllers to get the updates while the data in Service changes.
-AngularJS will update the scope only in case of binding object, ***strings,bools are immutable*** and will not update!
+
+> AngularJS will update the scope only in case of binding object, ***strings,bools are immutable*** and will not update!
 
 Example service:
 ```js
@@ -214,7 +216,8 @@ function checkFormController(checkService){
 ```
 
 # Use ES6/7 JavaScript:
-**Always use ES6 features**. 
+
+> **Always use ES6 features**. 
 
 Because we use Babel and it can transform all of this stuff to ES5.
 
@@ -229,7 +232,7 @@ You can use classes instead of functions in case you can extend this class with 
 ## Async / Await
 Instead of using old promises, use new **Async/Await** syntax from ES7 (or Generators if you prefer). We think its great!
 
-To transform to ES5 we use `transform-async-to-generator`. So you can use Async/Await and generators created by Babel.
+> To transform to ES5 we use `transform-async-to-generator`. So you can use Async/Await and generators created by Babel.
 
 Don't forget that `async function` return Promise **NOT** value. Example:
 ```js
