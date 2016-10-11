@@ -227,9 +227,32 @@ Why not `.js` ? Because Grunt+Babel will produce `.js` code from every of your `
 You can use classes instead of functions in case you can extend this class with another functions. If you dont plan to extend this class, there is no need to use classes instead of functions. Just use functions.
 
 ## Async / Await
-Instead of using old promises, use new Async/Await syntax from ES7 (or Generators if you prefer).
+Instead of using old promises, use new **Async/Await** syntax from ES7 (or Generators if you prefer). We think its great!
 
 To transform to ES5 we use `transform-async-to-generator`. So you can use Async/Await and generators created by Babel.
+
+Don't forget that `async function` return Promise **NOT** value. Example:
+```js
+function One(){
+	// Alert text 'a'
+	foo().then(
+		textFromBar=>{
+			alert(textFromBar);
+		}
+	);
+	// Alert promise object not text
+	alert( foo() );
+}
+
+function bar(){
+	return 'a';
+}
+async function foo() {
+	let text = await bar();
+	return text;
+}
+```
+
 
 ## Polyfill browser library:
 To use all ES6/7 features you need to add `polyfill.js` to your `index.html`:
