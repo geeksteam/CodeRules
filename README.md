@@ -8,6 +8,12 @@ Geeks.team code rules manifest.
 - [x] Make our developers write better code,
 - [x] Faster projects creation, more time for play PS4, cycling and....
 
+<img src="https://react-mdl.github.io/react-mdl/react.svg" width="250">
+
+**[React+Redux Code Rules](https://github.com/geeksteam/CodeRules/tree/master/React)**
+
+-----
+
 ![angulrjs](https://angularjs.org/img/AngularJS-large.png)
 
 **[AngularJS Code Rules](https://github.com/geeksteam/CodeRules/tree/master/AngularJS)**
