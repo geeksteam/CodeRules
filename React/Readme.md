@@ -1,6 +1,7 @@
-# React coding rules for reactive peoples.
+# React coding rules for reactive :rocket: peoples.
 
 ![geeks](https://github.com/geeksteam/VacancyFrontendTest/raw/master/logo-git.png)
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Love_Heart_SVG.svg" width="80">
 <img src="https://react-mdl.github.io/react-mdl/react.svg" width="250">
 
 ## Components:
@@ -18,7 +19,7 @@ and it catch the bugs with error props sets.
 
 Use arrow functions instead of `function my()` and don't use `self = this`.
 
-> Why? If you use `function my()` instead of arrow function you need to attach `self = this` to access `this` inside the function.
+> Why? If you use `function my()` instead of arrow function you need to attach `self = this` or `.bind(this)` to access `this` inside the function. With arrow function `this` is auto-binded.
 
 Example component declaration:
 
@@ -28,17 +29,22 @@ class SuperComponent extends React.Component {
   state = {
       // ...
   }
-  
-  // Use arrow functions
+  // Use arrow functions to auto-bind this
   handleChangeWebSite = (event) => {
       // ...
   }
-  
-  
+  // Render function
+  render = () => {
+      // ...
+  }
 }
 // Always set propTypes
 SuperComponent.propTypes = {
   name: React.PropTypes.string
+};
+// Set default props if needed
+SuperComponent.defaultProps = {
+  name: 'Mark Zuckerberg'
 };
 
 ```
