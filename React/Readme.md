@@ -50,6 +50,35 @@ SuperComponent.defaultProps = {
 export default SuperComponent;
 ```
 
+### Component render parts
+If your component has few states depending on `if`
+set render parts as `const` and then use if in `render()`.
+
+
+Example of processing state:
+```js
+render(){
+      // Dumb no data
+      const NoData = (
+          <div />
+      );
+      // Processing state
+      const Processing = (
+          <div>
+            <h4>Waiting for { this.props.ResultType } results...</h4>
+          </div>
+      );
+
+      // If we have procesing state return it
+      if (this.props.Results.Processing){
+        return Processing
+      }
+      // Otherwise return dumb
+      return NoData;
+  }
+}
+```
+
 ## Redux
 
 ### Connect using arrow functions
