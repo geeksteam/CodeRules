@@ -6,7 +6,7 @@
 
 ## Components:
 
-### Component declaration
+### Component declaration.
 
 Use ES6 classes to declare component instead of old and ugly React.CreateComponent.
 
@@ -50,7 +50,7 @@ SuperComponent.defaultProps = {
 export default SuperComponent;
 ```
 
-### Component render parts
+### `IF` logic in components.
 If your component has few states depending on `if`
 set render parts as `const` and then use if in `render()`.
 
@@ -79,9 +79,32 @@ render(){
 }
 ```
 
-## Redux
+### Dont use className in components.
+To provide consistency of your component dont use className while use component.
 
-### Connect using arrow functions
+Bad:
+```js
+<SuperComponent className=red />
+```
+
+Instead use `className` inside `render()` of your components.
+
+Good:
+```js
+render(){
+      const RedDiv = (
+          <div className=red></div>
+      );
+      return RedDiv;
+}
+```
+
+### Use `setValue()` to setState from input.
+TODO
+
+## Redux:
+
+### Connect using arrow functions.
 If your connector simple and connect only one object use anonymous arrow function instead of sepatate function.
 
 > Why? Because arrow function here are read much better.
@@ -95,4 +118,12 @@ export default connect(
     }
   )(SuperComponent);
 ```
+
+## Use redux-form
+http://redux-form.com
+TODO
+
+### Use redux-raven-middleware for sending errors with state. 
+https://blog.sentry.io/2016/08/24/redux-middleware-error-logging.html
+TODO
 
