@@ -1,4 +1,4 @@
-# Break the rules, but not code rules )))
+# Break the rules :punch:, but not our code rules )))
 Geeks.team code rules manifest.
 
 **Rules...Why?**
