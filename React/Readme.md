@@ -47,4 +47,23 @@ SuperComponent.defaultProps = {
   name: 'Mark Zuckerberg'
 };
 
+export default SuperComponent;
 ```
+
+## Redux
+
+### Connect using arrow functions
+If your connector simple and connect only one object use anonymous arrow function instead of sepatate function.
+
+> Why? Because arrow function here are read much better.
+
+Simple connector:
+```js
+// Connect redux store and return component
+export default connect( 
+    (store)=>{ 
+      return { Results: store } 
+    }
+  )(SuperComponent);
+```
+
