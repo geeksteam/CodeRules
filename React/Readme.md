@@ -129,3 +129,5 @@ TODO
 https://blog.sentry.io/2016/08/24/redux-middleware-error-logging.html
 TODO
 
+### Use combine Reducers
+As your app grows more complex, you'll want to split your reducing function into separate functions, each managing `own parts of the state`.
