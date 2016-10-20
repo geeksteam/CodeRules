@@ -102,6 +102,8 @@ render(){
 ### Use `setValue()` to setState from input.
 TODO
 
+![Redux](https://raw.githubusercontent.com/reactjs/redux/master/logo/logo-title-dark.png)
+
 ## Redux:
 
 ### Connect using arrow functions.
