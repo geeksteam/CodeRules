@@ -1,4 +1,4 @@
-# Break the rules :punch:, but not our coding/dev rules )))
+# :punch: Break the rules, but not our coding/dev rules )))
 Geeks.team code rules manifest.
 
 **Rules...Why?**
@@ -9,11 +9,12 @@ Geeks.team code rules manifest.
 - [x] Faster projects creation, more time for play PS4, cycling and....
 
 -----
-## Our dev cycle
+## Our dev cycle :clap:
 ![devCycle](https://github.com/geeksteam/CodeRules/blob/master/Geeks.DevProcess.png)
 
-[<img src="https://react-mdl.github.io/react-mdl/react.svg" alt="react" width="250">](https://github.com/geeksteam/CodeRules/tree/master/React "React")
 -----
+
+[<img src="https://react-mdl.github.io/react-mdl/react.svg" alt="react" width="250">](https://github.com/geeksteam/CodeRules/tree/master/React "React")
 
 **[React+Redux Code Rules](https://github.com/geeksteam/CodeRules/tree/master/React)**
 
