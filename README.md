@@ -8,24 +8,23 @@ Geeks.team code rules manifest.
 - [x] Make our developers write better code,
 - [x] Faster projects creation, more time for play PS4, cycling and....
 
------
-## Our dev cycle :clap:
-![devCycle](https://github.com/geeksteam/CodeRules/blob/master/Geeks.DevProcess.png)
+## :ok_hand: Rules and BPs.
 
------
+### UI Design:
+- [Material](https://material.google.com)
 
-[<img src="https://react-mdl.github.io/react-mdl/react.svg" alt="react" width="250">](https://github.com/geeksteam/CodeRules/tree/master/React "React")
+### Frontend development:
+- [AngularJS](https://github.com/geeksteam/CodeRules/tree/master/React)
+- [React+Redux](https://github.com/geeksteam/CodeRules/tree/master/React)
 
-**[React+Redux Code Rules](https://github.com/geeksteam/CodeRules/tree/master/React)**
+### Backend development:
+- [Go Lang](https://github.com/geeksteam/CodeRules/tree/master/Go)
 
------
+### Testing:
+- Coming soon...
 
-[![angulrjs](https://angularjs.org/img/AngularJS-large.png)](https://github.com/geeksteam/CodeRules/tree/master/AngularJS "AngularJS")
+## :clap: Our dev cycle
+![GeeksDevCycle](https://github.com/geeksteam/CodeRules/blob/master/Geeks.DevProcess.png)
 
-**[AngularJS Code Rules](https://github.com/geeksteam/CodeRules/tree/master/AngularJS)**
-
------
-
-![golang](https://github.com/golang-samples/gopher-vector/blob/master/gopher-front.png)
-
-**Go lang Code Rules**
+## Beware of octocat
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
