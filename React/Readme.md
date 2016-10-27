@@ -8,11 +8,11 @@
 
 <pre>
 app/src $ tree
+├── Store // Redux Store
+│   ├── Store.jsx
+│   └──Reducers // Reducers
+│      └── SomeReducer.jsx
 ├── components
-│   ├── Store // Redux Store
-│   │   ├── Store.jsx
-│   │   └──Reducers // Reducers
-│   │      └── SomeReducer.jsx
 │   ├── App // Component
 │   │   ├── App.jsx
 │   │   ├── app.sass
