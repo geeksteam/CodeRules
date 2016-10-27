@@ -4,6 +4,27 @@
 <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Love_Heart_SVG.svg" width="80">
 <img src="https://react-mdl.github.io/react-mdl/react.svg" width="250">
 
+## Directory Structure:
+
+app/src $ tree
+.
+├── components
+│   ├── Store // Redux Store
+│   │   ├── Store.jsx
+│   │   └──Reducers // Reducers
+│   │      └── SomeReducer.jsx
+│   ├── App // Component
+│   │   ├── App.jsx
+│   │   ├── app.sass
+│   │   └── app_test.jsx
+│   ├── Note // Component
+│   │   ├── Note.jsx
+│   │   ├── note.sass
+│   │   └── note_test.jsx
+│   └── index.js
+├── index.jsx
+└── main.css
+
 ## Components:
 
 ### Component declaration.
