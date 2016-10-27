@@ -10,8 +10,8 @@
 app/src $ tree
 ├── Store // Redux Store
 │   ├── Store.jsx
-│   └──Reducers // Reducers
-│      └── SomeReducer.jsx
+│   └── Reducers // Reducers
+│       └── SomeReducer.jsx
 ├── components
 │   ├── App // Component
 │   │   ├── App.jsx
