@@ -6,8 +6,8 @@
 
 ## Directory Structure:
 
+<pre>
 app/src $ tree
-.
 ├── components
 │   ├── Store // Redux Store
 │   │   ├── Store.jsx
@@ -24,6 +24,7 @@ app/src $ tree
 │   └── index.js
 ├── index.jsx
 └── main.css
+</pre>
 
 ## Components:
 
