@@ -10,10 +10,10 @@ Geeks.team code rules manifest.
 
 ## :ok_hand: Rules and BPs.
 
-### UI/UX, Design:
+### UI/UX, Design.
 - [Material](https://material.google.com)
 
-### Frontend development:
+### Frontend development.
 
 #### HTML/SASS naming:
 - [BEM](https://ru.bem.info/methodology/naming-convention/)
@@ -22,10 +22,10 @@ Geeks.team code rules manifest.
 - [AngularJS](https://github.com/geeksteam/CodeRules/tree/master/React)
 - [React+Redux](https://github.com/geeksteam/CodeRules/tree/master/React)
 
-### Backend development:
+### Backend development.
 - [Go Lang](https://github.com/geeksteam/CodeRules/tree/master/Go)
 
-### Testing:
+### Testing.
 - Coming soon...
 
 ## :clap: Our dev cycle
