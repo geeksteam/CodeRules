@@ -26,7 +26,7 @@ Geeks.team code rules manifest.
 - [Go Lang](https://github.com/geeksteam/CodeRules/tree/master/Go)
 
 ### Testing.
-- Coming soon...
+- Apiary. Coming soon...
 
 ## :clap: Our dev cycle
 ![GeeksDevCycle](https://github.com/geeksteam/CodeRules/blob/master/Geeks.DevProcess.png)
