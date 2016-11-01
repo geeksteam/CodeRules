@@ -8,20 +8,25 @@
 
 <pre>
 app/src $ tree
+├── App // Main app
+│   ├── App.jsx
+│   └── App.sass
+├── Assets // Images or shared css/sass
+│   ├── Logo.svg
+│   └── Button.sass
 ├── Store // Redux Store
 │   ├── Store.jsx
 │   └── Reducers // Reducers
 │       └── SomeReducer.jsx
-├── components
-│   ├── App // Component
-│   │   ├── App.jsx
-│   │   ├── app.sass
-│   │   └── app_test.jsx
-│   ├── Note // Component
-│   │   ├── Note.jsx
-│   │   ├── note.sass
-│   │   └── note_test.jsx
-│   └── index.js
+├── Сomponents // Components dir
+│   ├── LoginForm // Some component
+│   │   ├── LoginForm.jsx
+│   │   ├── LoginForm.sass
+│   │   └── LoginForm_test.jsx
+│   └── Note // Some component
+│       ├── Note.jsx
+│       ├── note.sass
+│       └── note_test.jsx
 ├── index.jsx
 └── main.css
 </pre>
