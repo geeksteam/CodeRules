@@ -12,3 +12,8 @@ if err != nil {
         return errors.Wrap(err, "read failed")
 }
 ```
+
+---
+
+## Useful links
+[Great article about package layouts](https://medium.com/@benbjohnson/standard-package-layout-7cdbc8391fc1#.87ughckae)
