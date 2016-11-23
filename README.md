@@ -11,12 +11,12 @@ Geeks.team code rules manifest.
 ## :ok_hand: Rules and BPs.
 
 ### UI/UX, Design.
-- [Material](https://material.google.com)
+- [-> Material](https://material.google.com)
 
 ### Frontend development.
 
 #### HTML/SASS naming:
-- [BEM](https://ru.bem.info/methodology/naming-convention/)
+- [-> BEM](https://ru.bem.info/methodology/naming-convention/)
 
 #### JS:
 - [AngularJS](https://github.com/geeksteam/CodeRules/tree/master/React)
@@ -25,8 +25,8 @@ Geeks.team code rules manifest.
 ### Backend development.
 - [Go Lang](https://github.com/geeksteam/CodeRules/tree/master/Go)
 
-### Testing.
-- Apiary. Coming soon...
+#### API Testing
+- [Apiary, Dredd](https://github.com/geeksteam/CodeRules/tree/master/Apiary)
 
 ## :clap: Our dev cycle
 ![GeeksDevCycle](https://github.com/geeksteam/CodeRules/blob/master/Geeks.DevProcess.png)
