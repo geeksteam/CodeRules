@@ -50,7 +50,7 @@ def set_globals(transaction):
                     transaction['request']['headers']['Testing-domain'] = testDomain
 ```
 
-### Passing global variables
+### Variables inside requests/expectations
 We are using `$VAR` syntax inside our requests and reponses in `.apib` files to convert them to variables.
 For passing variables inside `apib` responses/requests we're using `dredd_hooks/variables.py` hook:
 ```python
