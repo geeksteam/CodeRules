@@ -50,17 +50,24 @@ def set_globals(transaction):
                     transaction['request']['headers']['Testing-domain'] = testDomain
 ```
 
-### Variables in requests and responses
+### Passing global variables
 We are using `$VAR` syntax inside our requests and reponses in `.apib` files to convert them to variables.
-For converting we're using `dredd_hooks/variables.py` hook:
+For passing variables inside `apib` responses/requests we're using `dredd_hooks/variables.py` hook:
 ```python
 import dredd_hooks as hooks
 
-my_var = 'hello'
+## Local stash
+# variables
+variables = {}
+# example variable
+variables['$USER_NAME']='regularUser'
 
 # Replace $VARS
 @hooks.before_each
 def set_variables(transaction):
-                    transaction['request']['body'] = transaction['request']['body'].replace('$MY_VAR', my_var)
-                    transaction['expected']['body'] = transaction['expected']['body'].replace('$MY_VAR', my_var)
+	if transaction['skip'] != True:
+		# Iterate over keys
+		for key, value in variables.iteritems():
+			transaction['request']['body'] = transaction['request']['body'].replace(key, value)
+			transaction['expected']['body'] = transaction['expected']['body'].replace(key, value)
 ```
