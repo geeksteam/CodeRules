@@ -31,5 +31,3 @@ Geeks.team code rules manifest.
 ## :clap: Our dev cycle
 ![GeeksDevCycle](https://github.com/geeksteam/CodeRules/blob/master/Geeks.DevProcess.png)
 
-## Beware of octocat
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
