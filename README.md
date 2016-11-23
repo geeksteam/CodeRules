@@ -1,4 +1,4 @@
-# :punch: Break the rules, but not our coding/dev rules )))
+# :punch: Break the rules, but not our coding/dev rules
 Geeks.team code rules manifest.
 
 **Rules...Why?**
