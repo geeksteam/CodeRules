@@ -15,8 +15,8 @@ Ex: `10-about.apib`, `20-main.apib`, `30-clean.apib`.
 ## Hooks
 
 ### Hook files
-Dredd hook files must be inside feature directory and named `dredd_hooks.py`.
-Global hooks placed inside `/dredd_hooks` directory.
+Global hooks placed inside `/_hooks` directory.
+Hook files inside feature directory must be named `feature-name_hooks.py`.
 
 ### Hook's tests naming and status code
 Tests that using hooks must have `@Hook` prefix to its name to indicate this in Apiary tests lists. 
@@ -35,10 +35,10 @@ without knowing what hooks did.
 As Dredd can't pass global variables to the hooks, we are pass them to each hooks in `transaction` object.
 You can get them in every hook in this object.
 
-To add global variables to `transaction` we'are using `dredd_hooks/variables.py` 
+To add global variables to `transaction` we'are using `_hooks/globals.py` 
 hook that execute `before_each` and sets those vars.
 
-Example of `dredd_hooks/variables.py`:
+Example of `_hooks/globals.py`:
 ```python
 import dredd_hooks as hooks
 
@@ -52,7 +52,7 @@ def set_globals(transaction):
 
 ### Variables inside requests/expectations
 We are using `$VAR` syntax inside our requests and reponses in `.apib` files to convert them to variables.
-For passing variables inside `apib` responses/requests we're using `dredd_hooks/variables.py` hook:
+For passing variables inside `apib` responses/requests we're using `_hooks/variables.py` hook:
 ```python
 import dredd_hooks as hooks
 
