@@ -19,8 +19,14 @@ Global hooks placed inside `/_hooks` directory.
 Hook files inside feature directory must be named `feature-name_hooks.py`.
 
 ### Hook's tests naming and status code
-Tests that using hooks must have `@Hook` prefix to its name to indicate this in Apiary tests lists. 
-Ex: `@Hook Test sending emails`.
+Tests that using hooks must have `!Hook` prefix to its name and point to dummy url `[HEAD /@hook]`.
+Ex: 
+```
+## !Hook FTP account testing [HEAD /@hook]
+Test FTP account by ftp client
+
++ Response 299
+```
 
 To mark test which using hook as success/fail we are using http code `299` for hook's success execution.
 Http code `299` set to transaction inside hooks when hook success:
