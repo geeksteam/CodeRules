@@ -2,6 +2,9 @@
 
 <img width="30%" src="https://raw.github.com/golang-samples/gopher-vector/master/gopher.png"/>
 
+## Logging
+Using logger, logger.debug.
+
 ## Errors handling
 
 ### Use context with Errors
