@@ -33,6 +33,9 @@ app/src $ tree
 
 ## Components:
 
+### Don't render to the body
+As Den mentioned in his blog [https://medium.com/@dan_abramov/two-weird-tricks-that-fix-react-7cf9bbdef375], render root component into `Body` will slow down your React application. Render it to `Div id="root"` inside `Body`.
+
 ### Component declaration.
 
 Use ES6 classes to declare component instead of old and ugly React.CreateComponent.
