@@ -14,7 +14,7 @@ app/src $ tree
 ├── Assets // Images or shared css/sass
 │   ├── Logo.svg
 │   └── Button.sass
-├── Store // Redux Store
+├── Store // Redux or MobX Store
 │   ├── Store.jsx
 │   └── Reducers // Reducers
 │       └── SomeReducer.jsx
@@ -161,3 +161,47 @@ TODO
 
 ### Use combine Reducers
 As your app grows more complex, you'll want to split your reducing function into separate functions, each managing `own parts of the state`.
+
+<img src="https://raw.githubusercontent.com/mobxjs/mobx/master/docs/mobx.png" width=450 />
+
+## MobX:
+
+### Enabling Decorators with Create-React-App without Ejecting
+Install npm decorators plugin `npm install --save babel-plugin-transform-decorators-legacy`.
+Go to `node_modules/react-scripts/config/webpack.config.dev.js`, and add `[require.resolve('babel-plugin-transform-decorators-legacy')` to plugins of options object, like this:
+```
+...
+// Process JS with Babel.
+      {
+        test: /\.(js|jsx)$/,
+        include: paths.appSrc,
+        loader: require.resolve('babel-loader'),
+        options: {
+          babelrc: false,
+          presets: [require.resolve('babel-preset-react-app')],
+
+          // ! We added this line to make decorators work
+          plugins: [require.resolve('babel-plugin-transform-decorators-legacy')],
+
+          cacheDirectory: true,
+        },
+...
+```
+Do the same with `node_modules/react-scripts/config/webpack.config.prod.js`.
+
+### Export only new store object.
+Export only created (singleton) store object to avoid stores dedublication in different components.
+Example of `SimpleStore.js` mobx store file:
+```js
+import {observable} from "mobx";
+
+class simpleStore {
+	@observable Domains = [
+        'v64.com',
+        'io.v64.sh'
+    ]
+}
+
+const SimpleStore = new simpleStore();
+export default SimpleStore;
+```
