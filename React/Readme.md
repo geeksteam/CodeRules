@@ -4,7 +4,7 @@
 <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Love_Heart_SVG.svg" width="80">
 <img src="https://react-mdl.github.io/react-mdl/react.svg" width="250">
 
-## Directory Structure:
+## React project directory structure:
 
 <pre>
 app/src $ tree
@@ -15,16 +15,17 @@ app/src $ tree
 │   ├── Logo.svg
 │   └── Button.sass
 ├── Store // Redux or MobX Store
-│   ├── Store.jsx
-│   └── Reducers // Reducers
+│   ├── SomeStore.jsx
+│   └── Reducers // Reducers for Redux
 │       └── SomeReducer.jsx
 ├── Сomponents // Components dir
 │   ├── LoginForm // Some component
-│   │   ├── LoginForm.jsx
+│   │   ├── index.jsx
 │   │   ├── LoginForm.sass
 │   │   └── LoginForm_test.jsx
 │   └── Note // Some component
-│       ├── Note.jsx
+│       ├── index.jsx
+|	├── DumbComponent.jsx
 │       ├── note.sass
 │       └── note_test.jsx
 ├── index.jsx
