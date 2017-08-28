@@ -1,4 +1,4 @@
-# React coding rules for reactive :rocket: peoples.
+# React, <a href="#redux">Redux</a>, <a href="#mobx">MobX</a> coding rules for reactive :rocket: peoples.
 
 ![geeks](https://github.com/geeksteam/VacancyFrontendTest/raw/master/logo-git.png)
 <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Love_Heart_SVG.svg" width="80">
