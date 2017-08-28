@@ -20,7 +20,7 @@ Geeks.team code rules manifest.
 
 #### JS:
 - [AngularJS](https://github.com/geeksteam/CodeRules/tree/master/React)
-- [React+Redux](https://github.com/geeksteam/CodeRules/tree/master/React)
+- [React+Redux/MobX](https://github.com/geeksteam/CodeRules/tree/master/React)
 
 ### Backend development.
 - [Go Lang](https://github.com/geeksteam/CodeRules/tree/master/Go)
