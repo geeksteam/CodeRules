@@ -18,11 +18,12 @@ Geeks.team code rules manifest.
 #### HTML/SASS naming:
 - [-> BEM](https://ru.bem.info/methodology/naming-convention/)
 
-#### JS:
+#### React:
 - [React](https://github.com/geeksteam/CodeRules/tree/master/React)
 - [MobX](https://github.com/geeksteam/CodeRules/tree/master/React/Mobx)
 - [Redux](https://github.com/geeksteam/CodeRules/tree/master/React/Redux)
 
+#### Angular:
 - [AngularJS](https://github.com/geeksteam/CodeRules/tree/master/React)
 
 ### Backend development.
