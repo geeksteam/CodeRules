@@ -19,4 +19,5 @@ if err != nil {
 ---
 
 ## Useful links
+[ Golang Traps ](https://go-traps.appspot.com)
 [Great article about package layouts](https://medium.com/@benbjohnson/standard-package-layout-7cdbc8391fc1#.87ughckae)
