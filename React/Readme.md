@@ -206,3 +206,42 @@ class simpleStore {
 const SimpleStore = new simpleStore();
 export default SimpleStore;
 ```
+
+### Use Provider and @inject
+If you need to pass store through multiple layers of components use `<Provider store=... />` and `@inject`.
+```js
+@inject("color") @observer
+class Button extends React.Component {
+  render() {
+    return (
+      <button style={{background: this.props.color}}>
+        {this.props.children}
+      </button>
+    );
+  }
+}
+
+class Message extends React.Component {
+  render() {
+    return (
+      <div>
+        {this.props.text} <Button>Delete</Button>
+      </div>
+    );
+  }
+}
+
+class MessageList extends React.Component {
+  render() {
+    const children = this.props.messages.map((message) =>
+      <Message text={message.text} />
+    );
+    return <Provider color="red">
+        <div>
+            {children}
+        </div>
+    </Provider>;
+  }
+}
+```
+[More about Providers](https://github.com/mobxjs/mobx-react#provider-and-inject)
