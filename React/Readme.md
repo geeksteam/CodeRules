@@ -14,22 +14,30 @@ app/src $ tree
 ├── Assets // Images or shared css/sass
 │   ├── Logo.svg
 │   └── Button.sass
-├── Store // Redux or MobX Store
-│   ├── SomeStore.jsx
-│   └── Reducers // Reducers for Redux
-│       └── SomeReducer.jsx
-├── Сomponents // Components dir
+├── Сomponents // Reusable Components dir
 │   ├── LoginForm // Some component
 │   │   ├── index.jsx
 │   │   ├── LoginForm.sass
 │   │   └── LoginForm_test.jsx
-│   └── Note // Some component
+│   └── Note.jsx // Some simple component
+├── Navigation // Navigation elements components
+│   └── TopNavigation // Reducers for Redux
 │       ├── index.jsx
-|	├── DumbComponent.jsx
-│       ├── note.sass
-│       └── note_test.jsx
+│       ├── TopNavigation.sass
+│       └── TopNavigation.jsx
+├── Stores // Redux or MobX Store
+│   ├── SomeStore.jsx
+│   └── Reducers // Reducers for Redux
+│       └── SomeReducer.jsx
+├── Services // Global services as Rest, GraphQL and etc.
+|   └── RestService.jsx // Some Service
+├── Screens // Screens (pages) component
+│   └── MainScreen // Some screen component
+│       ├── index.jsx
+│       ├── MainScreen.sass
+│       └── MainScreen_test.jsx
 ├── index.jsx
-└── main.css
+└── main.sass
 </pre>
 
 ## Components:
