@@ -2,7 +2,7 @@
 
 ![geeks](https://github.com/geeksteam/VacancyFrontendTest/raw/master/logo-git.png)
 <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Love_Heart_SVG.svg" width="80">
-<img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" width="80">
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" width="110">
 
 ## React project directory structure:
 
